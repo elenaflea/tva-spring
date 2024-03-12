@@ -19,7 +19,7 @@ public class TvaController {
     }
 
     @PostMapping
-    public String postTva(@RequestParam float prixHT, @RequestParam float taux, Model model){
+    public String postTva(@RequestParam double prixHT, @RequestParam double taux, Model model){
 
       //  System.out.println("Prix HT: " + prixHT);
        // System.out.println("Taux TVA : " + taux);

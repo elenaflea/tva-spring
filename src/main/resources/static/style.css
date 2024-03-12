@@ -13,3 +13,7 @@ body{
     margin: auto;
 
 }
+.row{
+    display: flex;
+    flex-direction: row !important;
+}
