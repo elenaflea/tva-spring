@@ -17,14 +17,22 @@
 <form action="/tva" method="post">
     <div class="mb-3 ">
         <label for="exampleFormControlInput1" class="form-label">Prix HT, €</label>
-        <input type="number" step=".01" class="form-control" id="exampleFormControlInput1" placeholder="Prix HT" name="prixHT">
+        <input
+                type="number"
+                step=".01"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Prix HT"
+                name="prixHT"
+                th:value="${param.prixHT}">
     </div>
 
     <div class="mb-3">
+        <label  class="form-label">Taux TVA, %</label>
         <select class="form-select" aria-label="Default select example" name="taux">
-            <option selected>Choisir le taux TVA</option>
+
             <option value="5.5">5.5%</option>
-            <option value="10">10%</option>
+            <option value="10" selected="${param.taux==10}">10%</option>
             <option value="20">20%</option>
         </select>
     </div>
